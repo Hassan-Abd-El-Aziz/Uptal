@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+/* ===================== */
+/* Theme Variables (v4)  */
+/* ===================== */
+@theme {
+  /* Colors */
+  --color-primary-1: #4e0278;
+  --color-primary-2: #7002bb;
+
+  --color-background: #ffffff;
+
+  --color-text-primary: #1f1d1e;
+  --color-text-secondary: #aaaaaa;
+
+  --color-success: #1a8025;
+  --color-warning: #990204;
+
+  --color-border-light: #e5e7eb;
+
+  /* Font */
+  --font-roboto: "Roboto", sans-serif;
+
+  /* Font sizes */
+  --text-h1: 36px;
+  --text-h2: 32px;
+  --text-h3: 28px;
+  --text-h4: 24px;
+  --text-h5: 16px;
+  --text-h6: 17px;
+  --text-subhead-20: 20px;
+  --text-body-16: 16px;
+  --text-body-14: 14px;
+  --text-body-12: 12px;
+
+  /* Spacing */
+  --spacing-gutter: 32px;
+  --spacing-margin-desktop: 100px;
+  --spacing-margin-mobile: 16px;
+}
+
+/* ===================== */
+/* Base Layer            */
+/* ===================== */
+@layer base {
+  html {
+    font-family: var(--font-roboto);
+  }
+
+  body {
+    @apply bg-background text-text-primary;
+  }
+}
+
+/* ===================== */
+/* Components            */
+/* ===================== */
+@layer components {
+  .card-base {
+    @apply bg-white rounded-lg border border-border-light p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary-1 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary-2 hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply border border-primary-1 text-primary-1 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary-1 hover:text-white hover:scale-105;
+  }
+
+  .badge {
+    @apply px-3 py-1 rounded-full text-body-12 font-medium;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-success;
+  }
+
+  .badge-warning {
+    @apply bg-red-100 text-warning;
+  }
+
+  .grid-container {
+    @apply grid grid-cols-12 gap-gutter mx-auto px-margin-desktop;
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      @apply px-margin-mobile;
+    }
+  }
+}
