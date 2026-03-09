@@ -113,11 +113,16 @@ export default {
       isCollapsed: true,
       navigationItems: [
         { key: "home", path: "/", icon: "HomeIcon" },
-        { key: "activeRequests", path: "/proposals", icon: "DocumentTextIcon" },
-        { key: "payment", path: "/checkout", icon: "CreditCardIcon" },
-        { key: "chat", path: "#", icon: "ChatIcon" },
-        { key: "setting", path: "#", icon: "CogIcon" },
-        { key: "logout", path: "#", icon: "LogoutIcon" },
+        {
+          key: "activeRequests",
+          path: "/active-requests",
+          icon: "DocumentTextIcon",
+        },
+        { key: "payment", path: "/payment", icon: "CreditCardIcon" },
+        { key: "chat", path: "/chat", icon: "ChatIcon" },
+        { key: "setting", path: "/settings", icon: "CogIcon" },
+
+        { key: "logout", path: "/logout", icon: "LogoutIcon" },
       ],
     };
   },
