@@ -7,7 +7,7 @@
         'min-h-screen bg-gray-50',
       ]"
     >
-      <router-view />
+      <slot />
     </main>
   </div>
 </template>

@@ -12,11 +12,14 @@
     <div
       class="h-20 flex items-center justify-center border-b border-border-light"
     >
-      <h1
-        class="text-h4 text-primary-1 font-bold"
-        :class="{ 'text-2xl': isCollapsed }"
-      >
-        {{ isCollapsed ? "U" : "Uptal" }}
+      <h1 class="font-bold" :class="{ 'text-2xl': isCollapsed }">
+        <template v-if="isCollapsed">
+          <span class="text-primary-1 font-black">U</span>
+        </template>
+        <template v-else>
+          <span class="text-primary-1 font-bold text-3xl">Up</span>
+          <span class="text-primary-2 font-light text-2xl">tal</span>
+        </template>
       </h1>
     </div>
 
