@@ -8,6 +8,7 @@ import Chat from "../pages/Chat.vue";
 import Settings from "../pages/Settings.vue";
 import Logout from "../pages/Logout.vue";
 import Login from "../pages/Login.vue";
+import Signup from "../pages/signup.vue";
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login,
+  },
+  {
+    path: "/signup",
+    name: "signup",
+    component: Signup,
   },
   {
     path: "/",

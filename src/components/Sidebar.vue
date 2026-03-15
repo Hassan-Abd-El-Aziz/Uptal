@@ -5,8 +5,6 @@
       isCollapsed ? 'w-20' : 'w-64',
       $i18n.locale === 'ar' ? 'right-0 left-auto border-l border-r-0' : '',
     ]"
-    @mouseenter="!isMobile && (isCollapsed = false)"
-    @mouseleave="!isMobile && (isCollapsed = true)"
   >
     <!-- Logo -->
     <div
@@ -103,6 +101,12 @@ import { useWindowSize } from "@vueuse/core";
 
 export default {
   name: "Sidebar",
+  props: {
+    isCollapsed: {
+      type: Boolean,
+      default: true,
+    },
+  },
   components: {
     HomeIcon,
     DocumentTextIcon,
@@ -113,7 +117,6 @@ export default {
   },
   data() {
     return {
-      isCollapsed: true,
       navigationItems: [
         { key: "home", path: "/", icon: "HomeIcon" },
         {
