@@ -9,6 +9,7 @@ import Settings from "../pages/Settings.vue";
 import Logout from "../pages/Logout.vue";
 import Login from "../pages/Login.vue";
 import Signup from "../pages/signup.vue";
+import SignupStep2 from "../pages/SignupStep2.vue";
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     path: "/signup",
     name: "signup",
     component: Signup,
+  },
+  {
+    path: "/signupstep2",
+    name: "signupstep2",
+    component: SignupStep2,
   },
   {
     path: "/",

@@ -19,77 +19,69 @@
           <h2 class="text-2xl mb-4 font-bold text-center">Sign up</h2>
 
           <span class="font-light text-gray-400 mb-4 text-center">
-            Step 1/2</span
+            Step 2/2</span
           >
 
           <div class="py-2">
-            <span class="mb-2 text-md">Email</span>
+            <span class="mb-2 text-md">Company Email</span>
             <input
               type="text"
               class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-300"
               name="email"
               id="email"
-              placeholder="Email:example@info.com"
+              placeholder="Write Your  Company Email here...."
             />
           </div>
-          <div class="py-4">
-            <span class="mb-2 text-md">Password</span>
+          <div class="py-2">
+            <span class="mb-2 text-md">Company Name</span>
             <input
-              type="password"
-              name="pass"
-              id="pass"
+              type="text"
               class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-300"
-              placeholder="Suggested Password: jod_dk5"
+              name="email"
+              id="email"
+              placeholder="Write Your Company Name here...."
             />
           </div>
-          <div class="py-4">
-            <span class="mb-2 text-md">Confirm Password</span>
+          <div class="py-2">
+            <span class="mb-2 text-md">Title in the Company</span>
             <input
-              type="password"
-              name="pass"
-              id="pass"
+              type="text"
               class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-300"
-              placeholder="write your password here again"
+              name="email"
+              id="email"
+              placeholder="Write Your Title here...."
             />
           </div>
-
+          <div class="py-2">
+            <span class="mb-2 text-md">Company industry</span>
+            <input
+              type="text"
+              class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-300"
+              name="email"
+              id="email"
+              placeholder="Write Company industry  here...."
+            />
+          </div>
+          <div class="pb-10">
+            <span class="mb-2 text-md">Company Employees Capacity</span>
+            <select
+              name=""
+              id=""
+              class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light text-gray-500"
+            >
+              <option>select</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="20">50</option>
+              <option value="20">more than 50</option>
+            </select>
+          </div>
           <button
             @click="login"
             class="w-full bg-primary-1 transition-colors duration-300 hover:cursor-pointer text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300"
           >
-            Next
+            Create account
           </button>
-
-          <div class="flex flex-row items-center justify-center">
-            <span class="bg-gray-300 h-0.5 w-24 mb-4"></span
-            ><span class="mb-4 pl-4 pr-4 text-sm font-semibold text-gray-400"
-              >OR Login With</span
-            ><span class="bg-gray-300 h-0.5 w-24 mb-4"></span>
-          </div>
-
-          <div class="flex flex-row items-center justify-between">
-            <button
-              class="my-0 border border-gray-300 text-[12px] p-2 rounded-lg mb-15 hover:bg-primary-1 transition-colors duration-300 hover:cursor-pointer hover:text-white"
-            >
-              <img
-                src="https://img.icons8.com/color/16/000000/google-logo.png"
-                alt="img"
-                class="w-6 h-6 inline mr-2"
-              />
-              Sign in with Google
-            </button>
-            <button
-              class="my-0 border border-gray-300 text-[12px] p-2 rounded-lg mb-15 hover:bg-primary-1 transition-colors duration-300 hover:cursor-pointer hover:text-white"
-            >
-              <img
-                class="w-6 h-6 inline"
-                src="https://img.icons8.com/color/48/facebook.png"
-                alt="facebook"
-              />
-
-              Sign in with Facbook
-            </button>
-          </div>
         </div>
       </div>
     </div>
@@ -109,6 +101,6 @@ onMounted(() => {
 const router = useRouter();
 
 const login = () => {
-  router.push("/signupstep2");
+  router.push("/dashboard");
 };
 </script>

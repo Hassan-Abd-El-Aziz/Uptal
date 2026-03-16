@@ -7,11 +7,11 @@
       <div class="absolute inset-0 bg-black/30"></div>
       <div
         data-aos="zoom-in"
-        data-aos-delay="400"
-        class="relative flex flex-col m-4 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 h-[95%]"
+        data-aos-delay="200"
+        class="relative flex flex-col m-4 space-y-4 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 h-[95%]"
       >
         <!-- right side -->
-        <div class="flex flex-col justify-center p-8 md:p-14 mt-10">
+        <div class="flex flex-col justify-center p-8 md:p-8 mt-5 leading-none">
           <span class="mb-4 text-4xl text-primary-2 font-light text-center"
             ><span class="text-primary-1 font-bold">Up</span>tal</span
           >
@@ -44,12 +44,13 @@
               placeholder="Password: must be 8 characters or more"
             />
           </div>
-          <div class="flex justify-between w-full py-4">
-            <div class="mr-24">
+          <div class="flex w-full justify-between py-2 pt-2 items-center">
+            <div class="">
               <input type="checkbox" name="ch" id="ch" class="mr-2" />
-              <span class="text-md">Remember for 30 days</span>
+              <span class="text-[12px] md:text-sm">Remember for 30 days</span>
             </div>
-            <span class="font-bold text-md text-primary-1 hover:cursor-pointer"
+            <span
+              class="font-bold text-[12px] md:text-sm text-primary-1 hover:cursor-pointer"
               >Forgot password?</span
             >
           </div>
@@ -59,10 +60,10 @@
           >
             Login
           </button>
-          <div class="text-center text-gray-400 mt-5 mb-8">
+          <div class="text-center text-gray-400 mt-5 mb-8 text-sm">
             Dont'have an account?
             <span
-              class="font-bold text-primary-2 hover:cursor-pointer"
+              class="font-bold text-primary-2 hover:cursor-pointer text-sm"
               @click="signup"
             >
               Sign up

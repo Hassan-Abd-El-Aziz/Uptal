@@ -22,7 +22,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="p-4 space-y-2" v-if="!isMobile">
+    <nav class="p-4 space-y-2">
       <router-link
         v-for="item in navigationItems"
         :key="item.path"
@@ -45,28 +45,8 @@
       </router-link>
     </nav>
 
-    <!-- Mobile Bottom Navigation -->
-    <nav
-      v-else
-      class="fixed bottom-0 left-0 right-0 bg-white border-t border-border-light flex justify-around p-2"
-    >
-      <router-link
-        v-for="item in navigationItems"
-        :key="item.path"
-        :to="item.path"
-        class="flex flex-col items-center p-2 rounded-lg transition-all duration-300"
-        active-class="text-primary-1"
-      >
-        <component :is="item.icon" class="w-5 h-5" />
-        <span class="text-body-12 mt-1">{{
-          $t(`navigation.${item.key}`)
-        }}</span>
-      </router-link>
-    </nav>
-
     <!-- Profile Section -->
     <div
-      v-if="!isMobile"
       class="absolute bottom-0 left-0 right-0 p-4 border-t border-border-light"
     >
       <div class="flex items-center" :class="{ 'justify-center': isCollapsed }">
@@ -97,7 +77,6 @@ import {
   Cog6ToothIcon as CogIcon,
   ArrowLeftOnRectangleIcon as LogoutIcon,
 } from "@heroicons/vue/24/outline";
-import { useWindowSize } from "@vueuse/core";
 
 export default {
   name: "Sidebar",
@@ -118,7 +97,7 @@ export default {
   data() {
     return {
       navigationItems: [
-        { key: "home", path: "/", icon: "HomeIcon" },
+        { key: "home", path: "/dashboard", icon: "HomeIcon" },
         {
           key: "activeRequests",
           path: "/active-requests",
@@ -131,12 +110,6 @@ export default {
         { key: "logout", path: "/logout", icon: "LogoutIcon" },
       ],
     };
-  },
-  computed: {
-    isMobile() {
-      const { width } = useWindowSize();
-      return width.value < 768;
-    },
   },
 };
 </script>
