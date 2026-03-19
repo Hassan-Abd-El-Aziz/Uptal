@@ -2,17 +2,7 @@
   <header
     class="flex items-center justify-between bg-white px-8 py-4 border-b border-border-light z-40 relative"
   >
-    <!-- Search Bar -->
-    <div class="relative w-96 hidden md:block">
-      <input
-        type="text"
-        :placeholder="$t('dashboard.search') || 'Search...'"
-        class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-border-light bg-gray-50 focus:bg-white focus:border-primary-1 focus:ring-1 focus:ring-primary-1 transition-all duration-300 outline-none rtl:pl-4 rtl:pr-10"
-      />
-      <MagnifyingGlassIcon
-        class="w-5 h-5 text-gray-400 absolute top-1/2 -translate-y-1/2 left-3 rtl:left-auto rtl:right-3"
-      />
-    </div>
+ 
 
     <!-- Right Side Actions & Profile -->
     <div class="flex items-center gap-6 ml-auto rtl:ml-0 rtl:mr-auto">

@@ -19,7 +19,7 @@ const routes = [
     meta: { layout: "DefaultLayout" },
   },
   {
-    path: "/login",
+    path: "/",
     name: "Login",
     component: Login,
   },
@@ -32,10 +32,6 @@ const routes = [
     path: "/signupstep2",
     name: "signupstep2",
     component: SignupStep2,
-  },
-  {
-    path: "/",
-    redirect: "/login",
   },
   {
     path: "/proposals",

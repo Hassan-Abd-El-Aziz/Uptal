@@ -40,6 +40,16 @@
 
         <div class="flex items-center">
           <div class="relative">
+            <button class="relative p-2">
+              <BellIcon class="w-6 h-6 text-gray-800" />
+
+              <!-- دائرة عدد الإشعارات -->
+              <span
+                class="absolute top-0 right-0 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full"
+              >
+                3
+              </span>
+            </button>
             <button
               @click="showUserMenu = !showUserMenu"
               class="w-10 h-10 rounded-full"
@@ -50,6 +60,7 @@
                 class="w-10 h-10 rounded-full"
               />
             </button>
+            hassan
             <div
               v-if="showUserMenu"
               class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50"
@@ -96,7 +107,7 @@
 import Sidebar from "../components/Sidebar.vue";
 import Breadcrumb from "../components/ui/Breadcrumb.vue";
 import { useWindowSize } from "@vueuse/core";
-import { MagnifyingGlassIcon } from "@heroicons/vue/24/outline";
+import { MagnifyingGlassIcon, BellIcon } from "@heroicons/vue/24/outline";
 
 export default {
   name: "DefaultLayout",
@@ -104,6 +115,7 @@ export default {
     Sidebar,
     Breadcrumb,
     MagnifyingGlassIcon,
+    BellIcon,
   },
   setup() {
     const { width } = useWindowSize();
